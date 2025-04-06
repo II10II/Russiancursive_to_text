@@ -9,6 +9,6 @@ Web-приложение для распознавания текста на р�
 
 Для распознавания изображений используется нейронная сеть [TrOCR](https://huggingface.co/kazars24/trocr-base-handwritten-ru). 
 
-Подробности о модели на [GitHub](https://github.com/kha-white/manga-ocr).
+Подробности о модели на [GitHub](https://github.com/microsoft/unilm/tree/master/trocr).
 
 [Ссылка на развернутое приложение](https://yazolga-kanji-to-text-main-f0d9ge.streamlit.app/).
