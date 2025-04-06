@@ -7,7 +7,7 @@ Web-приложение для распознавания текста на р�
 - [Transformers]( https://huggingface.co/)
 - [Torchvision](https://pytorch.org/vision/stable/index.html)
 
-Для распознавания изображений используется нейронная сеть [Manga OCR](https://huggingface.co/kha-white/manga-ocr-base). 
+Для распознавания изображений используется нейронная сеть [TrOCR](https://huggingface.co/kazars24/trocr-base-handwritten-ru). 
 
 Подробности о модели на [GitHub](https://github.com/kha-white/manga-ocr).
 
