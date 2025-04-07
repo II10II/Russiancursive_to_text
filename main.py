@@ -1,24 +1,26 @@
+import io
 import streamlit as st
-from transformers import TrOCRProcessor, VisionEncoderDecoderModel
+
+from transformers import pipeline
 from PIL import Image
 
-st.title("Распознавание рукописной кириллицы с изображения")
-st.write("Загрузите изображение с рукописным текстом для распознавания.")
 
-# Загрузка модели и процессора
-processor = TrOCRProcessor.from_pretrained("karzars24/trocr-base-handwritten-ru")
-model = VisionEncoderDecoderModel.from_pretrained("karzars24/trocr-base-handwritten-ru")
+def load_image():
+    uploaded_file = st.file_uploader(label='Выберите изображение для распознавания')
+    if uploaded_file is not None:
+        image_data = uploaded_file.getvalue()
+        st.image(image_data)
+        return Image.open(io.BytesIO(image_data))
+    else:
+        return None
 
-uploaded_file = st.file_uploader("Выберите изображение...", type=["jpg", "png", "jpeg"])
 
-if uploaded_file is not None:
-    image = Image.open(uploaded_file).convert("RGB")
-    st.image(image, caption="Загруженное изображение", use_column_width=True)
+st.title('Распознай японский текст с изображения!')
+img = load_image()
 
-    # Обработка изображения и предсказание
-    pixel_values = processor(image, return_tensors="pt").pixel_values
-    generated_ids = model.generate(pixel_values)
-    generated_text = processor.batch_decode(generated_ids, skip_special_tokens=True)[0]
-
-    st.subheader("Результат распознавания:")
-    st.write(generated_text)
+result = st.button('Распознать изображение')
+if result:
+    captioner = pipeline("image-to-text","kazars24/trocr-base-handwritten-ru")
+    text = captioner(img)
+    st.write('**Результаты распознавания:**')
+    st.write(text[0]["generated_text"])
