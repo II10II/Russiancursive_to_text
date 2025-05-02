@@ -9,7 +9,7 @@
 - PyTorch — работа с нейронными сетями.
 - Pillow — обработка изображений.
 
-Для распознавания изображений используется нейронная сеть https://huggingface.co/kazars24/trocr-base-handwritten-ru
+Для распознавания изображений используется нейронная сеть [TrOCR] (https://huggingface.co/kazars24/trocr-base-handwritten-ru)
 
-Ссылка на развёрнутое приложение: (https://russiancursivetotext-53bqrnhbawrozbamkotwak.streamlit.app/)
+[Ссылка на развёрнутое приложение] (https://russiancursivetotext-53bqrnhbawrozbamkotwak.streamlit.app/)
 
