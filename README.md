@@ -4,10 +4,10 @@
 Приложение выполнено проектной командой ИИ-10 в рамках обучения на цифровых кафедрах УрФУ по программе "Решение прикладных и фундаментальных задач в гуманитаристике с использованием языка программирования Python"
 2024-2025 уч.год
 Используются библиотеки:
-- Streamlit — для создания интерфейса.
-- Transformers — загрузка модели TrOCR.
-- PyTorch — работа с нейронными сетями.
-- Pillow — обработка изображений.
+- [Streamlit](https://streamlit.io/)
+- [Transformers](https://huggingface.co/)
+-[Torchvision](https://pytorch.org/vision/stable/index.html)
+- [Pillow](https://pypi.org/project/pillow/)
 
 Для распознавания изображений используется нейронная сеть [TrOCR](https://huggingface.co/kazars24/trocr-base-handwritten-ru)
 
