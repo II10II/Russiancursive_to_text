@@ -7,8 +7,8 @@
 Используются библиотеки:
 - [Streamlit](https://streamlit.io/)
 - [Transformers](https://huggingface.co/)
--[Torchvision]
-(https://pytorch.org/vision/stable/index.html) 
+- [Torchvision](
+https://pytorch.org/vision/stable/index.html) 
 - [Pillow](https://pypi.org/project/pillow/)
 
 Для распознавания изображений используется нейронная сеть [TrOCR](https://huggingface.co/kazars24/trocr-base-handwritten-ru)
